@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/blog-server/blog-server.iml" filepath="$PROJECT_DIR$/blog-server/blog-server.iml" />
+      <module fileurl="file://$PROJECT_DIR$/vueblog/vueblog-java/cnvblog/cnvblog.iml" filepath="$PROJECT_DIR$/vueblog/vueblog-java/cnvblog/cnvblog.iml" />
+      <module fileurl="file://$PROJECT_DIR$/vueblog/vueblog-java/vueblog/vueblog.iml" filepath="$PROJECT_DIR$/vueblog/vueblog-java/vueblog/vueblog.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/vuebolg8102.iml" filepath="$PROJECT_DIR$/.idea/vuebolg8102.iml" />
+    </modules>
+  </component>
+</project>

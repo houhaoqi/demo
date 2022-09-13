@@ -1,0 +1,29 @@
+server:
+  port: 8104
+
+spring:
+  datasource:
+    druid:
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      url: jdbc:mysql://124.223.92.156:3307/test?serverTimezone=UTC&useUnicode=true&characterEncoding=utf-8
+      username: root
+      password: haoqi
+  web:
+    resources:
+      static-locations: classpath:/templates/,classpath:/static/
+  devtools:
+    restart:
+      # 不加载热部署的目录文件
+      exclude: static/**, public/**, application.yml
+      # 关闭热部署
+      enabled: false
+mybatis-plus:
+  global-config:
+    db-config:
+      table-prefix: tbl_
+      id-type: auto
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
+
+
