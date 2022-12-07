@@ -1,10 +1,9 @@
 <template>
-  <div>
+  <div class="header">
     <el-container>
-      <el-header>
-        <img class="mlogo" src="../assets/logo.png" alt="logo图片" />
-      </el-header>
+      <el-header></el-header>
       <el-main>
+        <img class="mlogo" src="../assets/header.jpg" alt="logo图片" />
         <el-form :model="ruleForm" :rules="rules" ref="ruleForm" label-width="100px" class="demo-ruleForm">
           <el-form-item label="用户姓名" prop="username">
             <el-input v-model="ruleForm.username"></el-input>
@@ -29,7 +28,7 @@
     data () {
       return {
         ruleForm: {
-          username: 'admin',
+          username: 'haoqi',
           password: '111111'
         },
         rules: {
@@ -77,8 +76,8 @@
     },
     mounted(){
       this.$notify({
-          title: 'look here',
-          message: 'hello haoqi',
+          title: 'hello !',
+          message: '还没登录哦！',
           duration: 1500
       });
     }
@@ -86,26 +85,26 @@
 </script>
 
 <style scoped>
-.el-header,
-.el-footer {
-  background-color: #b3c0d1;
-  color: rgb(142, 109, 109);
-  text-align: center;
-  line-height: 60px;
-}
 
+.header{
+  height: 1000px;
+}
 .el-main {
-  /* background-color: #e9eef3; */
+  background-color: #e5fffd7c;
   color: rgb(199, 0, 0);
   text-align: center;
-  line-height: 160px;
+  line-height: 50px;
+  width: 30%;
+  height: 100%;
+  margin: 100px auto;
+  border-radius: 5%;
 }
 .mlogo {
-  height: 80%;
+  /* padding: 10px 0; */
+  margin: 0 auto;
+  height: 25%;
+  width: 25%;
+  border-radius: 50%;
 }
 
-.demo-ruleForm {
-  max-width: 500px;
-  margin: 0 auto;
-}
 </style>

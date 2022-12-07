@@ -1,17 +1,18 @@
 <template>
-  <div>
+  <div class="blogdetail">
     <Header></Header>
     <div class="blog">
       <h2>{{blog.title}}</h2>
       <el-link icon="el-icon-edit" v-if="ownblog" class="linklist">
-        <router-link :to="{name:'BlogEdit',params:{blogid:blog.id}}">
-          编辑
-        </router-link>
-      </el-link>
+        <el-button  type="primary" round >
+          <router-link :to="{name:'BlogEdit',params:{blogid:blog.id}}">编辑</router-link>
+        </el-button>
+      </el-link> &nbsp;
       <el-link icon="el-icon-delete" v-if="ownblog" class="linklist">
         <el-button type="danger" round @click="delblog">删除</el-button>
       </el-link>
       <el-divider></el-divider>
+
       <div class="markdown-body" v-html="blog.content"></div>
     </div>
   </div>
@@ -91,20 +92,47 @@
           _this.ownblog = (blog.userId === _this.$store.getters.getUser.id)
         })
       }
+    },
+    mounted(){
+      this.$notify({
+          title: '欢迎 ^=^ !',
+          message: '阅读一下吧 ^-^ !',
+          duration: 1500
+      });
     }
   }
 </script>
 
 <style scoped>
+  .blogdetail{
+    width: 60%;
+    margin: 0 auto;
+    height: 1100px;
+  }
   .mblog {
     margin-top: 10px;
-    box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 12px 0 rgba(252, 250, 250, 0.1);
     width: 100%;
     min-height: 700px;
     padding: 20px 15px;
-    margin: 10px;
+    margin: 10px 10px;
   }
   .linklist {
     margin: 5px;
   }
+  
+/* github-markdown */
+.markdown-body {
+    box-sizing: border-box;
+    min-width: 200px;
+    margin: 0 auto;
+    padding: 45px;
+    border-radius: 1%;
+}
+ 
+@media (max-width: 767px) {
+    .markdown-body {
+        padding: 15px;
+    }
+}
 </style>

@@ -1,25 +1,26 @@
 <template>
-  <div>
+  <div class="blogedit">
     <Header></Header>
     <div class="m-content">
       <el-form :model="ruleForm" :rules="rules" ref="ruleForm" label-width="100px" class="demo-ruleForm">
-
-        <el-form-item label="标题" prop="title">
+        <el-form-item>
+          <el-button type="primary" @click="submitForm('ruleForm')">发 布</el-button>
+          <el-button @click="resetForm('ruleForm')">重 置</el-button>
+        </el-form-item>
+        
+        <el-form-item label="标 题" prop="title">
           <el-input v-model="ruleForm.title"></el-input>
         </el-form-item>
 
-        <el-form-item label="摘要" prop="description">
+        <el-form-item label="摘 要" prop="description">
           <el-input type="textarea" v-model="ruleForm.description"></el-input>
         </el-form-item>
 
-        <el-form-item label="内容" prop="content">
+        <el-form-item label="内 容" prop="content">
           <mavon-editor v-model="ruleForm.content"></mavon-editor>
         </el-form-item>
 
-        <el-form-item>
-          <el-button type="primary" @click="submitForm('ruleForm')">发布</el-button>
-          <el-button @click="resetForm('ruleForm')">重置</el-button>
-        </el-form-item>
+        
       </el-form>
     </div>
   </div>
@@ -27,6 +28,9 @@
 
 <script>
 import Header from "../components/Header";
+import mavonEditor from 'mavon-editor'
+import 'mavon-editor/dist/css/index.css'
+
 export default {
   name: "BlogEdit",
   components: { Header },
@@ -94,13 +98,21 @@ export default {
 
       })
     }
-
+  },
+  mounted(){
+    this.$notify({
+        title: '编辑 ^=^!',
+        message: '随想一下',
+        duration: 1500
+    });
   }
 }
 </script>
 
 <style scoped>
-.m-content {
-  text-align: center;
-}
+  .blogedit{
+    width: 70%;
+    margin: 0 auto;
+    height: 1100px;
+  }
 </style>
