@@ -4,6 +4,7 @@
     <mapping directory="$PROJECT_DIR$/.." vcs="Git" />
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/hm-dianping" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/hm-dianping/client8080/html/hmdp" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/hm-dianping/nginx-1.18.0/html/hmdp" vcs="Git" />
   </component>
 </project>
