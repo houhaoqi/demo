@@ -1,7 +1,5 @@
 # 存放练习项目的仓库
 
-# springboot2学习内容和项目练习
-
 
 
 ## demo集合：
@@ -26,6 +24,7 @@
 (ps:外卖前台要将浏览器f12设为手机/平板模式浏览)
 
 ### 4.餐饮点评
+#### [代码仓库](https://github.com/houhaoqi/demos/tree/master/hm-dianping)
 
 
 
